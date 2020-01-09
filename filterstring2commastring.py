@@ -3,6 +3,8 @@ def commastring(filterstring, split1=None, split2=None):
 
 	# Check to make sure it's functioning
 	# print(list(split_list))
+
+	# Initialize the string for holding comma separated values
 	split_str = ""
 
 	# Using for loop, store the split_list in a single string, skipping the empty lines
