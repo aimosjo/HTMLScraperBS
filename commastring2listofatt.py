@@ -10,10 +10,6 @@ def commaatt(stringofatt, n):
 	# create a list of the split att
 	att = stringofatt.split(',')
 
-	# remove any extra blank values
-
-
-	# temporarily blocked for troubleshooting
 	# check if there will be leftover values after
 	# placing the string into a list of strings of length with n attributes
 	if not (np.mod(len(att),n)) == 0:
@@ -30,13 +26,17 @@ def commaatt(stringofatt, n):
 	att_strings = ['']
 	# use for loop to make list of n-attribute strings
 	for x in range(0,ind):
-		#print("Current value of x: " + str(x))
+
+		# increase the list by appending another empty string to the end
 		att_strings.append('')
 		
 		for y in range(0,n):
-			#print("Current value of x: " + str(x))
-			#print(att[x*n + y])
+			# iterate over the 
+			# e.g., if ind = 20, n = 3 -> 	att_string[0] = att[0] + att[1] + att[2]
+			# 								att_string[1] = att[3] + att[4] + att[5]
 			att_strings[x] += att[x*n + y] + ","
-		#print(att_strings[x])
-	print(list(att_strings)[:-1])
+	
+	# print(list(att_strings)[:-1])
+
+	# only return up to the last string, since the last item will still have a ',' in place
 	return list(att_strings[:-1])
