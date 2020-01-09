@@ -8,13 +8,14 @@ import url2domain
 
 def urlToHTML(url):
 	# call url2domain and use function to name the html file appropriately
-	# add time stamp function to this s.t. the saved html file will not be overwritten
+	# [LATER] add time stamp function to this s.t. the saved html file will not be overwritten
 	webname = url2domain.urlToDomain(url)
 	webname += ".html"
 
 	# use requests library to scrape the HTML text from the website
 	r = requests.get(url)
 
+	# save the scraped html text to file for use later
 	Html_file= open(webname,"w")
 	Html_file.write(r.text)
 	Html_file.close()
