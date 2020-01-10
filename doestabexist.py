@@ -14,7 +14,7 @@ def tablecheck(fpath, fname, tname):
 
 		# if the count is 1, then table exists
 		if c.fetchone()[0] == 1:
-			print("Table " + tname + "exists in " + fname + ".db")
+			print("Table " + tname + " exists in " + fname + ".db")
 			return True;
 		else:
 			print("Table " + tname + " does not exist in " + fname + ".db")
