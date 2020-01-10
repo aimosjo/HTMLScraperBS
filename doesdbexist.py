@@ -6,12 +6,14 @@
 
 import os
 
+import getpath
+
 def checkdb(fpath, fname):
 	# concatenate the two strings (file path and the file name)
 
-	f = fpath + "/" + fname + ".db"
+	f = getpath.getpath(fpath,fname)
 	print(f)
-	
+
 	# true or false, depending if the file is in the directory
 	exists = os.path.isfile(f)
 	return exists
