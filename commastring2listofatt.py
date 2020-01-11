@@ -34,8 +34,11 @@ def commaatt(stringofatt, n):
 			# iterate over the 
 			# e.g., if ind = 20, n = 3 -> 	att_string[0] = att[0] + att[1] + att[2]
 			# 								att_string[1] = att[3] + att[4] + att[5]
-			att_strings[x] += att[x*n + y] + ","
-	
+			att_strings[x] += "'" + att[x*n + y] + "'" + ","
+
+		# remove the trailing "," from the list
+		att_strings[x] = att_strings[x][:-1]
+
 	# print(list(att_strings)[:-1])
 
 	# only return up to the last string, since the last item will still have a ',' in place
