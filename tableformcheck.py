@@ -11,4 +11,4 @@ def formcheck(fname, tname):
 	cursor = conn.execute("SELECT sql FROM sqlite_master WHERE name=?;", [tname])
 	sql = cursor.fetchone()[0]
 	cursor.close()
-	print(sql)
+	return sql
